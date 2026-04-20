@@ -17,6 +17,7 @@ func _ready() -> void:
 	EventManager.GAMEEND_received.connect(_on_gameend)
 
 func _on_gamestart() -> void:
+	Globals.sfx.play("GameStartSfx")
 	state = TableState.TABLE_READY
 	rotate_table()
 	for i in range(4):
@@ -43,6 +44,7 @@ func _on_gamestart() -> void:
 
 
 func _on_trumpstart() -> void:
+	Globals.sfx.play("ShuffleSfx")
 	play_started = false
 	state = TableState.TABLE_TRUMPING
 	for i in range(4):
@@ -62,11 +64,14 @@ func _on_playstart() -> void:
 			seat.sitter.state = Globals.player_manager.PLAYER_PLAYING
 
 func _on_yourplay(playable: String) -> void:
+	Globals.sfx.play("YourTurnSfx")
 	Globals.my_player.hand.playable = playable
+	
 	for cardStr in playable.split(","):
 		Globals.my_player.hand.set_playable(cardStr)
 
 func _on_play(user_id: String, card_str: String) -> void:
+	Globals.sfx.play("PlaySfx")
 	var player := Globals.player_manager.get_node(user_id) as Player
 	var hand := player.hand
 	if player != Globals.my_player:

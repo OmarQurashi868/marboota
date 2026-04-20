@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://8xkf68liril2"]
+[gd_scene load_steps=21 format=3 uid="uid://8xkf68liril2"]
 
 [ext_resource type="Texture2D" uid="uid://chnhuidtxoexr" path="res://assets/graphics/bg.jpg" id="1_bjwno"]
 [ext_resource type="Texture2D" uid="uid://xudi6b2awstb" path="res://assets/ui/icon_repeat_light.png" id="1_lit6y"]
@@ -8,6 +8,14 @@
 [ext_resource type="Script" path="res://scripts/game_ui.gd" id="5_cxi62"]
 [ext_resource type="Script" path="res://scripts/player_manager.gd" id="5_xiyoe"]
 [ext_resource type="Script" path="res://scripts/score_ui.gd" id="6_tl6g1"]
+[ext_resource type="Script" path="res://scripts/sfx.gd" id="9_7h4gs"]
+[ext_resource type="AudioStream" uid="uid://bnxd46fom5o6g" path="res://assets/sound/click-a.ogg" id="9_m11vu"]
+[ext_resource type="AudioStream" uid="uid://towhov0auirq" path="res://assets/sound/jingles_PIZZI16.ogg" id="11_2ir2m"]
+[ext_resource type="AudioStream" uid="uid://da64o28bb2gn3" path="res://assets/sound/cards/card-place-1.ogg" id="12_fpryv"]
+[ext_resource type="AudioStream" uid="uid://ds5jjbatyfr3e" path="res://assets/sound/cards/card-place-2.ogg" id="13_g51b6"]
+[ext_resource type="AudioStream" uid="uid://0m2ngu8ypfau" path="res://assets/sound/cards/card-place-3.ogg" id="14_ocalj"]
+[ext_resource type="AudioStream" uid="uid://b78utc0f1t3dv" path="res://assets/sound/jingles_PIZZI02.ogg" id="15_pixfu"]
+[ext_resource type="AudioStream" uid="uid://cxdujxu7qaora" path="res://assets/sound/cards/card-shuffle.ogg" id="16_tb26c"]
 
 [sub_resource type="Animation" id="Animation_5kc0w"]
 length = 0.001
@@ -45,6 +53,13 @@ _data = {
 "RESET": SubResource("Animation_5kc0w"),
 "spin": SubResource("Animation_x2ysv")
 }
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_impa4"]
+playback_mode = 1
+streams_count = 3
+stream_0/stream = ExtResource("12_fpryv")
+stream_1/stream = ExtResource("13_g51b6")
+stream_2/stream = ExtResource("14_ocalj")
 
 [node name="Game" type="Node2D"]
 
@@ -332,11 +347,47 @@ scale = Vector2(0.75, 0.75)
 position = Vector2(1202, 613)
 scale = Vector2(0.75, 0.75)
 
+[node name="Sfx" type="Node" parent="."]
+script = ExtResource("9_7h4gs")
+
+[node name="ClickSfx" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource("9_m11vu")
+volume_db = -6.0
+
+[node name="YourTurnSfx" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource("11_2ir2m")
+volume_db = -10.0
+
+[node name="HoverSfx" type="AudioStreamPlayer" parent="Sfx"]
+stream = SubResource("AudioStreamRandomizer_impa4")
+volume_db = -10.0
+max_polyphony = 3
+
+[node name="PlaySfx" type="AudioStreamPlayer" parent="Sfx"]
+stream = SubResource("AudioStreamRandomizer_impa4")
+volume_db = -10.0
+
+[node name="GameStartSfx" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource("15_pixfu")
+volume_db = -10.0
+
+[node name="ShuffleSfx" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource("16_tb26c")
+volume_db = -10.0
+
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/7Button" to="GameUI/TrumpCall" method="_on_trump_button_up" binds= ["7"]]
+[connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/7Button" to="Sfx" method="play" binds= ["ClickSfx"]]
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/8Button" to="GameUI/TrumpCall" method="_on_trump_button_up" binds= ["8"]]
+[connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/8Button" to="Sfx" method="play" binds= ["ClickSfx"]]
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/9Button" to="GameUI/TrumpCall" method="_on_trump_button_up" binds= ["9"]]
+[connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/9Button" to="Sfx" method="play" binds= ["ClickSfx"]]
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/10Button" to="GameUI/TrumpCall" method="_on_trump_button_up" binds= ["10"]]
+[connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/10Button" to="Sfx" method="play" binds= ["ClickSfx"]]
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/11Button" to="GameUI/TrumpCall" method="_on_trump_button_up" binds= ["11"]]
+[connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/11Button" to="Sfx" method="play" binds= ["ClickSfx"]]
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/12Button" to="GameUI/TrumpCall" method="_on_trump_button_up" binds= ["12"]]
+[connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/12Button" to="Sfx" method="play" binds= ["ClickSfx"]]
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/13Button" to="GameUI/TrumpCall" method="_on_trump_button_up" binds= ["13"]]
+[connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/13Button" to="Sfx" method="play" binds= ["ClickSfx"]]
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/PassButton" to="GameUI/TrumpCall" method="_on_trump_button_up" binds= ["PASS"]]
+[connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/PassButton" to="Sfx" method="play" binds= ["ClickSfx"]]

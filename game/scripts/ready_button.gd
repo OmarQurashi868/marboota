@@ -6,6 +6,7 @@ func _ready() -> void:
 
 
 func _on_toggled(toggled_on: bool) -> void:
+	Globals.sfx.play("ClickSfx")
 	if toggled_on:
 		Globals.my_player.state = Globals.player_manager.PLAYER_READY
 		EventManager.send_request(EventManager.ready_request()

@@ -13,8 +13,8 @@ var seat: Seat = null
 var hand: Hand = null
 
 func unseat() -> void:
-    state = manager.PLAYER_IDLE
-    seat = null
-    hand = null
-    # Move player back to player list
-    manager.pin_player(self)
+	state = manager.PLAYER_IDLE
+	seat = null
+	hand = null
+	# Move player back to player list
+	manager.pin_player(self)

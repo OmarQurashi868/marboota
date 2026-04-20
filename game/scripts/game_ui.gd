@@ -9,6 +9,7 @@ func _ready() -> void:
 	EventManager.TRUMPCALL_received.connect(_on_trumpcall)
 
 func _on_yourtrumpcall(min_score_str: String, max_score_str: String) -> void:
+	Globals.sfx.play("YourTurnSfx")
 	min_score_str_global = min_score_str
 	max_score_str_global = max_score_str
 	var min_score := int(min_score_str)

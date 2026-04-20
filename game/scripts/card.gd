@@ -44,6 +44,7 @@ func set_playable(playable: bool) -> void:
 func _on_area_2d_mouse_entered() -> void:
 	if !is_played && $"..".is_mine:
 		$"..".card_hovered(self)
+			
 
 func _on_area_2d_mouse_exited() -> void:
 	if !is_played && $"..".is_mine:
@@ -54,6 +55,7 @@ func hover(b: bool) -> void:
 		# var tween = create_tween()
 		if b:
 			if is_playable:
+				Globals.sfx.play("HoverSfx")
 				position.y -= 25
 				# if tween:
 				# 	tween.kill()

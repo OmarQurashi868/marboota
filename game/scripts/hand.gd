@@ -89,6 +89,7 @@ func rehover() -> void:
 		hovered_cards[id].hover(true)
 	
 func play(card: Card) -> void:
+	Globals.sfx.play("PlaySfx")
 	card.reparent(anchor)
 	cards.erase(card)
 	hovered_cards.erase(card)
