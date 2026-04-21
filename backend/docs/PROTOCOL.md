@@ -73,7 +73,7 @@ Requests to unsit the client from the game table and back to spectating. Returns
 ### READY
 Requests to set the client at the game table as ready. Returns an error if the player is not seated or was already ready.
 > [!NOTE]
-> Once all players in a table are ready, the game will trigger the PLAYSTART sequence
+> Once all players in a table are ready, the game will trigger the GAMESTART sequence
 ```json
 {
     "ACTION":"READY",

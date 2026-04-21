@@ -1,5 +1,9 @@
 # marboota# Marboota Game Documentation
 
+# [contribution guide](./documentation/contribution_guide.md)
+
+# [backend docs](./backend/README.md)
+
 ## Project Overview
 
 Marboota is a multiplayer board/card game developed with Godot 4.3. The game focuses on table-based gameplay where players can join, sit at a table, and indicate their readiness to play.
@@ -214,7 +218,3 @@ When adding new features:
    - Consider where the logic belongs (client vs. server)
    - For client-side validation, implement in appropriate script
    - For server-validated actions, use the request-response pattern
-
-# [contribution guide](./documentation/contribution_guide.md)
-
-# [backend docs](./backend/README.md)
