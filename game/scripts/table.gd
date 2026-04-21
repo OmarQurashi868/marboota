@@ -139,6 +139,12 @@ func _on_roundend(_team_a_score: String, _team_b_score: String) -> void:
 		)
 
 func _on_gameend(winner_1_id: String, winner_2_id: String) -> void:
+	var my_id := Globals.my_player.id
+	if my_id in [winner_1_id, winner_2_id]:
+		Globals.sfx.play("WinSfx")
+	else:
+		Globals.sfx.play("LoseSfx")
+	
 	state = TableState.TABLE_IDLE
 
 	un_rotate_table()

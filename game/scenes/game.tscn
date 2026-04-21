@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://8xkf68liril2"]
+[gd_scene load_steps=23 format=3 uid="uid://8xkf68liril2"]
 
 [ext_resource type="Texture2D" uid="uid://chnhuidtxoexr" path="res://assets/graphics/bg.jpg" id="1_bjwno"]
 [ext_resource type="Texture2D" uid="uid://xudi6b2awstb" path="res://assets/ui/icon_repeat_light.png" id="1_lit6y"]
@@ -16,6 +16,8 @@
 [ext_resource type="AudioStream" uid="uid://0m2ngu8ypfau" path="res://assets/sound/cards/card-place-3.ogg" id="14_ocalj"]
 [ext_resource type="AudioStream" uid="uid://b78utc0f1t3dv" path="res://assets/sound/jingles_PIZZI02.ogg" id="15_pixfu"]
 [ext_resource type="AudioStream" uid="uid://cxdujxu7qaora" path="res://assets/sound/cards/card-shuffle.ogg" id="16_tb26c"]
+[ext_resource type="AudioStream" uid="uid://cia382pxqov6o" path="res://assets/sound/jingles_PIZZI10.ogg" id="17_wfn2g"]
+[ext_resource type="AudioStream" uid="uid://ci6cr204m7jc2" path="res://assets/sound/jingles_PIZZI07.ogg" id="18_1h46f"]
 
 [sub_resource type="Animation" id="Animation_5kc0w"]
 length = 0.001
@@ -373,6 +375,14 @@ volume_db = -10.0
 
 [node name="ShuffleSfx" type="AudioStreamPlayer" parent="Sfx"]
 stream = ExtResource("16_tb26c")
+volume_db = -10.0
+
+[node name="WinSfx" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource("17_wfn2g")
+volume_db = -10.0
+
+[node name="LoseSfx" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource("18_1h46f")
 volume_db = -10.0
 
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/7Button" to="GameUI/TrumpCall" method="_on_trump_button_up" binds= ["7"]]
