@@ -64,6 +64,7 @@ func _on_player_leave(id: String) -> void:
 
 
 func _on_player_sit(id: String, seat_num: String) -> void:
+	Globals.sfx.play("SitSfx")
 	var seat_str := "../Table/Seat" + seat_num
 	var seat := get_node(seat_str) as Seat
 	seat.seat_player(id)
@@ -76,6 +77,7 @@ func _on_player_sit(id: String, seat_num: String) -> void:
 
 
 func _on_player_unsit(id: String) -> void:
+	Globals.sfx.play("SitSfx")
 	var player := get_node(id) as Player
 	player.seat.unseat_player()
 
