@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dqtf5ryq5rbe7"
-path.s3tc="res://.godot/imported/cardHeartsK.png-6f99aac89c355a8bdbda5796dd4c343e.s3tc.ctex"
+path="res://.godot/imported/cardHeartsK.png-6f99aac89c355a8bdbda5796dd4c343e.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/graphics/cards/cardHeartsK.png"
-dest_files=["res://.godot/imported/cardHeartsK.png-6f99aac89c355a8bdbda5796dd4c343e.s3tc.ctex"]
+dest_files=["res://.godot/imported/cardHeartsK.png-6f99aac89c355a8bdbda5796dd4c343e.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

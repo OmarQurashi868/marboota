@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://haha0q0yyasu"
-path.s3tc="res://.godot/imported/seat.png-b18c20a35179704e90b274b25e763b14.s3tc.ctex"
+path="res://.godot/imported/seat.png-b18c20a35179704e90b274b25e763b14.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/graphics/seat.png"
-dest_files=["res://.godot/imported/seat.png-b18c20a35179704e90b274b25e763b14.s3tc.ctex"]
+dest_files=["res://.godot/imported/seat.png-b18c20a35179704e90b274b25e763b14.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

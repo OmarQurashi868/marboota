@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cbvp0l5gaov0"
-path.s3tc="res://.godot/imported/emote_question.png-d23342056f9ba7aadcb101858c218d2d.s3tc.ctex"
+path="res://.godot/imported/emote_question.png-d23342056f9ba7aadcb101858c218d2d.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/graphics/emotes/emote_question.png"
-dest_files=["res://.godot/imported/emote_question.png-d23342056f9ba7aadcb101858c218d2d.s3tc.ctex"]
+dest_files=["res://.godot/imported/emote_question.png-d23342056f9ba7aadcb101858c218d2d.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

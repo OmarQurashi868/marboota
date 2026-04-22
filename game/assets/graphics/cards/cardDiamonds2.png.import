@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://draa210mjaajh"
-path.s3tc="res://.godot/imported/cardDiamonds2.png-ed33843e3416db96a98cb006a54439b2.s3tc.ctex"
+path="res://.godot/imported/cardDiamonds2.png-ed33843e3416db96a98cb006a54439b2.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/graphics/cards/cardDiamonds2.png"
-dest_files=["res://.godot/imported/cardDiamonds2.png-ed33843e3416db96a98cb006a54439b2.s3tc.ctex"]
+dest_files=["res://.godot/imported/cardDiamonds2.png-ed33843e3416db96a98cb006a54439b2.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

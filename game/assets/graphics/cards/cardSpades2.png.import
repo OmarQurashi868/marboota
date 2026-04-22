@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bppj5p14e0kxn"
-path.s3tc="res://.godot/imported/cardSpades2.png-8b5b39db05104dafa260994f2ef1fbff.s3tc.ctex"
+path="res://.godot/imported/cardSpades2.png-8b5b39db05104dafa260994f2ef1fbff.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/graphics/cards/cardSpades2.png"
-dest_files=["res://.godot/imported/cardSpades2.png-8b5b39db05104dafa260994f2ef1fbff.s3tc.ctex"]
+dest_files=["res://.godot/imported/cardSpades2.png-8b5b39db05104dafa260994f2ef1fbff.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

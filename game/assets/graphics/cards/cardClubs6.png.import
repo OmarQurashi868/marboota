@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ed1pco4ahub3"
-path.s3tc="res://.godot/imported/cardClubs6.png-b5f38af1144b507c491087a78e80957d.s3tc.ctex"
+path="res://.godot/imported/cardClubs6.png-b5f38af1144b507c491087a78e80957d.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/graphics/cards/cardClubs6.png"
-dest_files=["res://.godot/imported/cardClubs6.png-b5f38af1144b507c491087a78e80957d.s3tc.ctex"]
+dest_files=["res://.godot/imported/cardClubs6.png-b5f38af1144b507c491087a78e80957d.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
