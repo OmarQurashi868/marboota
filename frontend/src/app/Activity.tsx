@@ -38,8 +38,10 @@ export const Activity = () => {
 
 	return (
 		<div>
-			<img src="/Logo.png" className="logo" alt="Logo" />
-			<h1>Marboota</h1>
+			{loading && <img src="/Logo.png" className="logo" alt="Logo" />}
+			
+			{loading && <h1>Marboota</h1>}
+
 			{loading ? (
 				<progress value={typeof loading === 'number' ? loading : undefined} max={100}></progress>
 			) : (
@@ -47,10 +49,13 @@ export const Activity = () => {
 					<canvas id="godot-canvas" tabIndex={-1} />
 				</div>
 			)}
-			<br />
-			<small>
-				Powered by <strong>Robo.js</strong>
-			</small>
+			
+			{loading && <br />}
+			{loading && (
+				<small>
+					Powered by <strong>Robo.js</strong>
+				</small>
+			)}
 		</div>
 	)
 }
