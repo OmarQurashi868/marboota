@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xudi6b2awstb"
-path.s3tc="res://.godot/imported/icon_repeat_light.png-2baedc6b55c7661e7efd035573e313b6.s3tc.ctex"
+path="res://.godot/imported/icon_repeat_light.png-2baedc6b55c7661e7efd035573e313b6.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/ui/icon_repeat_light.png"
-dest_files=["res://.godot/imported/icon_repeat_light.png-2baedc6b55c7661e7efd035573e313b6.s3tc.ctex"]
+dest_files=["res://.godot/imported/icon_repeat_light.png-2baedc6b55c7661e7efd035573e313b6.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

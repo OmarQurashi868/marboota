@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c3bnvb0jtvkjn"
-path.s3tc="res://.godot/imported/button_rectangle_flat-yellow.png-22441dea9609c0b0b1be5d1ce4b13550.s3tc.ctex"
+path="res://.godot/imported/button_rectangle_flat-yellow.png-22441dea9609c0b0b1be5d1ce4b13550.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/ui/button_rectangle_flat-yellow.png"
-dest_files=["res://.godot/imported/button_rectangle_flat-yellow.png-22441dea9609c0b0b1be5d1ce4b13550.s3tc.ctex"]
+dest_files=["res://.godot/imported/button_rectangle_flat-yellow.png-22441dea9609c0b0b1be5d1ce4b13550.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1

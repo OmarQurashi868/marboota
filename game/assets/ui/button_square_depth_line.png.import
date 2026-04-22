@@ -3,20 +3,19 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://fwpc3kk1ojgv"
-path.s3tc="res://.godot/imported/button_square_depth_line.png-a227523fa4333ef1de62d4f48c3803ad.s3tc.ctex"
+path="res://.godot/imported/button_square_depth_line.png-a227523fa4333ef1de62d4f48c3803ad.ctex"
 metadata={
-"imported_formats": ["s3tc_bptc"],
-"vram_texture": true
+"vram_texture": false
 }
 
 [deps]
 
 source_file="res://assets/ui/button_square_depth_line.png"
-dest_files=["res://.godot/imported/button_square_depth_line.png-a227523fa4333ef1de62d4f48c3803ad.s3tc.ctex"]
+dest_files=["res://.godot/imported/button_square_depth_line.png-a227523fa4333ef1de62d4f48c3803ad.ctex"]
 
 [params]
 
-compress/mode=2
+compress/mode=1
 compress/high_quality=false
 compress/lossy_quality=0.7
 compress/hdr_compression=1
