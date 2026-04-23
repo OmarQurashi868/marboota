@@ -38,12 +38,7 @@ export const Activity = () => {
 
 	return (
 		<div>
-			<img
-				src="/Logo.png"
-				className="logo"
-				alt="Logo"
-				style={{ display: loading ? 'block' : 'none' }}
-			/>
+			{loading && <img src="/Logo.png" className="logo" alt="Logo" />}
 
 			{loading && <h1>Marboota</h1>}
 
