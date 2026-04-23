@@ -38,8 +38,13 @@ export const Activity = () => {
 
 	return (
 		<div>
-			<img src="/Logo.png" className="logo" alt="Logo" />
-			
+			<img
+				src="/Logo.png"
+				className="logo"
+				alt="Logo"
+				style={{ display: loading ? 'block' : 'none' }}
+			/>
+
 			{loading && <h1>Marboota</h1>}
 
 			{loading ? (
@@ -49,7 +54,7 @@ export const Activity = () => {
 					<canvas id="godot-canvas" tabIndex={-1} />
 				</div>
 			)}
-			
+
 			{loading && <br />}
 			{loading && (
 				<small>
