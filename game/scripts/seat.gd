@@ -51,6 +51,7 @@ func unseat_player() -> void:
 func _on_button_button_up() -> void:
 	if Globals.my_player.state != Globals.player_manager.PLAYER_IDLE && Globals.my_player.state != Globals.player_manager.PLAYER_WAITING:
 		return
+	Globals.sfx.play("SitSfx")
 	seat_player(Globals.my_player.id)
 	seat_ready_button.show()
 	seat_leave_button.show()

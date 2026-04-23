@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=3 uid="uid://8xkf68liril2"]
+[gd_scene load_steps=25 format=3 uid="uid://8xkf68liril2"]
 
 [ext_resource type="Texture2D" uid="uid://chnhuidtxoexr" path="res://assets/graphics/bg.jpg" id="1_bjwno"]
 [ext_resource type="Texture2D" uid="uid://xudi6b2awstb" path="res://assets/ui/icon_repeat_light.png" id="1_lit6y"]
@@ -19,6 +19,7 @@
 [ext_resource type="AudioStream" uid="uid://cia382pxqov6o" path="res://assets/sound/jingles_PIZZI10.ogg" id="17_wfn2g"]
 [ext_resource type="AudioStream" uid="uid://ci6cr204m7jc2" path="res://assets/sound/jingles_PIZZI07.ogg" id="18_1h46f"]
 [ext_resource type="AudioStream" uid="uid://b1xk05nc58gix" path="res://assets/sound/chip-lay-1.ogg" id="19_eouae"]
+[ext_resource type="AudioStream" uid="uid://cx56834k2x2sa" path="res://assets/sound/maghrib.ogg" id="20_qqpxl"]
 
 [sub_resource type="Animation" id="Animation_5kc0w"]
 length = 0.001
@@ -67,6 +68,7 @@ stream_2/stream = ExtResource("14_ocalj")
 [node name="Game" type="Node2D"]
 
 [node name="LoadingUI" type="CanvasLayer" parent="."]
+visible = false
 script = ExtResource("1_w3f0r")
 
 [node name="LoadingScreen" type="Control" parent="LoadingUI"]
@@ -326,6 +328,20 @@ text = "0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="OptionsUI" type="CanvasLayer" parent="."]
+
+[node name="ToggleMusic" type="Button" parent="OptionsUI"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 43.0
+offset_top = -107.0
+offset_right = 273.0
+offset_bottom = -48.0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 36
+text = "Toggle Music"
+
 [node name="Table" parent="." instance=ExtResource("4_24tct")]
 position = Vector2(640, 360)
 
@@ -389,6 +405,11 @@ volume_db = -10.0
 stream = ExtResource("19_eouae")
 volume_db = -10.0
 
+[node name="BGM" type="AudioStreamPlayer" parent="Sfx"]
+stream = ExtResource("20_qqpxl")
+volume_db = -5.0
+autoplay = true
+
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/7Button" to="GameUI/TrumpCall" method="_on_trump_button_up" binds= ["7"]]
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/7Button" to="Sfx" method="play" binds= ["ClickSfx"]]
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/8Button" to="GameUI/TrumpCall" method="_on_trump_button_up" binds= ["8"]]
@@ -405,3 +426,4 @@ volume_db = -10.0
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/HBoxContainer/13Button" to="Sfx" method="play" binds= ["ClickSfx"]]
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/PassButton" to="GameUI/TrumpCall" method="_on_trump_button_up" binds= ["PASS"]]
 [connection signal="button_up" from="GameUI/TrumpCall/VBoxContainer/PassButton" to="Sfx" method="play" binds= ["ClickSfx"]]
+[connection signal="button_up" from="OptionsUI/ToggleMusic" to="Sfx" method="toggle_bgm"]

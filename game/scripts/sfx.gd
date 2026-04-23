@@ -11,3 +11,7 @@ func _ready() -> void:
 
 func play(sfx_name: String) -> void:
 	sfx_collection[sfx_name].play()
+
+func toggle_bgm() -> void:
+	sfx_collection["BGM"].playing = !sfx_collection["BGM"].playing
+	sfx_collection["BGM"].seek(0.0)
