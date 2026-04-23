@@ -1,3 +1,4 @@
+import logo from '../assets/Logo.png';
 import { useEffect } from 'react'
 import { DiscordSession, useDiscordSdk } from '../hooks/useDiscordSdk'
 import { useGodot } from '../hooks/useGodot'
@@ -38,7 +39,7 @@ export const Activity = () => {
 
 	return (
 		<div>
-			{loading && <img src="/Logo.png" className="logo" alt="Logo" />}
+			{loading && <img src={logo} className="logo" alt="Logo" />}
 			
 			{loading && <h1>Marboota</h1>}
 
