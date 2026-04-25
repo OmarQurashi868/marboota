@@ -38,7 +38,7 @@ export const Activity = () => {
 
 	return (
 		<div>
-			{loading && <img src="/icon.png" className="logo" alt="Icon" />}
+			{loading && <img src="/gameicon.png" className="logo" alt="Icon" />}
 
 			{loading && <h1>Marboota</h1>}
 
