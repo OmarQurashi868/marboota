@@ -39,7 +39,7 @@ export const Activity = () => {
 	return (
 		<div>
 			{loading && <img src="/Logo.png?v=1" className="logo" alt="Logo" />}
-			{loading && <img src="https://via.placeholder.com/150" alt="placeholder"/>}
+			{loading && <img src="https://placehold.co/400" alt="placeholder"/>}
 
 			{loading && <h1>Marboota</h1>}
 
